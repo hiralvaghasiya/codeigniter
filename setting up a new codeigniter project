@@ -19,7 +19,7 @@
   //LINE 55: $autoload['libraries'] = array('database','session','form_validation'); // they are often in use
   //LINE 67: $autoload['helper'] = array('url','file');                              // they are often in use
   //LINE112: $autoload['model'] = array('model_name');      // must use if you use any model or other way of configuration is avaliable
-  //LINE 83: $autoload['config'] = array('config');     // use config or other config often used in form validation
+  //LINE 83: $autoload['config'] = array('config');     // use config or other config name often used in form validation
   
 //application/config/routes.php
 
