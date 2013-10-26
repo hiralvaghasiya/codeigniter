@@ -1,0 +1,33 @@
+// I am using here netbeans editor and XAMPP server package
+// First I create a folder named as project_name at htdocs 
+// copy the all files(such as : system,application,index.php ...) under codeigniter_framework folder and paste it in project_name folder
+// CAUTION: If I make codeigniter_framework folder  under "project_name" it will not work 
+
+// Click "open project" in the top left corner of netbeans IDE and follow the widget.
+// By default index.php will be opened in the editor window . no need to change ,if want see comments
+// Now I have to configure some necessary files
+
+//application/config/config.php
+   //LINE 17: $config['base_url']	= 'http://localhost/projectName/';  // trailing slash needed
+   //LINE 29: $config['index_page'] = '';                             // value will be empty string
+   //LINE 60: $config['url_suffix'] = '.asp';                         // like .asp,.jsp etc
+   //LINE 227: $config['encryption_key'] = 'xyz';                     // value will be anything
+
+
+//application/config/autoload.php             // here I will autoload some libraries,model,packages,helper 
+
+  //LINE 55: $autoload['libraries'] = array('database','session','form_validation'); // they are often in use
+  //LINE 67: $autoload['helper'] = array('url','file');                              // they are often in use
+  //LINE112: $autoload['model'] = array('model_name');      // must use if you use any model or other way of configuration is avaliable
+  //LINE 83: $autoload['config'] = array('config');     // use config or other config often used in form validation
+  
+//application/config/routes.php
+
+  //LINE 41: $route['default_controller'] = "controlerName";    // default controller -must need
+  
+//application/config/database.php
+
+  //LINE 52: $db['default']['username'] = '';
+  //LINE 53: $db['default']['password'] = '';
+  //LINE 54: $db['default']['database'] = '';
+  // CAUTION: If if fill this information autoload.php files need to be configured correctly like database libraries
